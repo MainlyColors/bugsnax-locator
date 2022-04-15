@@ -30,6 +30,10 @@ function getFetch() {
   // to get around CORS error, took the data
   const url = '../JSON/bugsnax.json';
 
+  // proxy from https://codetabs.com/cors-proxy/cors-proxy.html to get around cors
+  // const url =
+  //   'https://api.codetabs.com/v1/proxy?quest=https://www.bugsnaxapi.com/api/bugsnax';
+
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
