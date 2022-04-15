@@ -23,14 +23,20 @@ function createBugsnaxLiElement(name, location) {
   return li;
 }
 
+const ul = document.querySelector('ul');
+
 function getFetch() {
   // const url = `https://www.bugsnaxapi.com/api/bugsnax`;
+  // to get around CORS error, took the data
   const url = '../JSON/bugsnax.json';
 
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
       console.log(data);
+      data.forEach((obj) => {
+        ul.appendChild(createBugsnaxLiElement(obj.name, obj.location.name));
+      });
     })
     .catch((err) => {
       console.log(`error ${err}`);

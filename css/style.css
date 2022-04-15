@@ -100,8 +100,13 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 400px;
+  background-color: var(--card-primary);
+  color: var(--card-text);
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.list-entry:first-of-type {
+li:first-child div {
+  color: unset;
   background-color: var(--background-tertiary);
 }
