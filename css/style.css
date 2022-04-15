@@ -37,7 +37,7 @@
 /* LAYOUT
 /*******************************************/
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,50 +84,24 @@ h3 {
   margin: 0;
 }
 
-.quote-container {
-  margin-top: 100px;
-  padding: 20px 35px;
-  background-color: var(--card-primary);
-  color: var(--card-text);
+.bugs-container {
+  color: var(--text-primary);
+}
+
+ul {
+  padding: 0;
+}
+.bugs-container li {
+  list-style: none;
+}
+
+.list-entry {
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 25px;
-}
-
-.quote-container h2 {
-  margin-top: 40px;
-  font-size: 24px;
-  font-weight: 400;
-}
-
-.quote-container q {
-  position: relative;
-  quotes: none;
-  quotes: '“' '”' '‘' '’';
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.5;
+  justify-content: space-between;
   width: 400px;
 }
 
-.quote-container q::before,
-.quote-container q::after {
-  content: '';
+.list-entry:first-of-type {
+  background-color: var(--background-tertiary);
 }
-
-.quote-container q::before {
-  position: absolute;
-  top: -50px;
-  left: -15px;
-  content: open-quote;
-  color: #9c8e64;
-  font-size: 72px;
-}
-
-/* .quote-container q::after {
-  position: absolute;
-  content: close-quote;
-  font-size: 48px;
-} */
